@@ -6,7 +6,7 @@ import Home from '../pages/Home';
 import Login from '../pages/Login';
 import Pesanan from '../pages/Pesanan';
 import Akun from '../pages/Akun';
-import BottomNavigator from '../components/BottomNavigator';
+import { BottomNavigator } from '../components/';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -24,8 +24,8 @@ const MainApp = () => {
 const Router = () => {
     return (
         <Stack.Navigator initialRouteName="MainApp">
-        <Stack.Screen name="Login" component={Login} options={{ headerShown: false }} />
         <Stack.Screen name="MainApp" component={MainApp} options={{ headerShown: false }} />
+        <Stack.Screen name="Login" component={Login} options={{ headerShown: false }} />
       </Stack.Navigator>
     )
 }
